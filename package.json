@@ -1,5 +1,12 @@
 {
     "name": "interactive-guide",
     "version": "0.0.1",
-    "author": "Jordan"
+    "author": "Jordan",
+    "description": "Interactive guide for Gift Shop bookkeeping processes.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "license": "ISC"
 }
