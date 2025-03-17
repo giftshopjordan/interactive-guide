@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Clover from "./pages/Clover";
-import Cheques from "./pages/Cheques"
+import Cheques from "./pages/Cheques";
 import Quickbooks from "./pages/Quickbooks";
 import NoPage from "./pages/NoPage";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
