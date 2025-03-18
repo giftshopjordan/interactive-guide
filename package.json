@@ -12,8 +12,5 @@
     "license": "ISC",
     "devDependencies": {
         "react-router-dom": "^7.3.0"
-    },
-    "dependencies": {
-        "react-script": "^2.0.5"
     }
 }
