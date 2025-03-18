@@ -1,11 +1,5 @@
 import { Link } from "react-router-dom";
-
-const imageContext = require.context('../../images', false, /\.(png|jpe?g|gif)$/);
-const images = imageContext.keys().reduce((acc, path) => {
-    const imageName = path.replace('./', '').replace(/\.(png|lpe?g|gif)$/, '');
-    acc[imageName] = imageContext(path);
-    return acc;
-}, {});
+import { images } from "../../utils/imageLoader";
 
 const PrintCheques = () => {
     return <>
