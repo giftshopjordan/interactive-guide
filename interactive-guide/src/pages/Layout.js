@@ -43,10 +43,9 @@ const Layout = () => {
                         Quickbooks
                         {showQuickbooksDropdown && (
                             <ul>
-                                <li><Link to="/quickbooks">Quickbooks</Link></li>
+                                <li><Link to="/quickbooks/PayBills">PayBills</Link></li>
                             </ul>
                         )}
-                        <Link to="/quickbooks">Quickbooks</Link>
                     </li>
                 </ul>
             </nav>
