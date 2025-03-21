@@ -1,38 +1,237 @@
-/* styles.css */
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav bar styles */
+nav {
+    background-color: #2C3E50;
+    padding: 10px 20px;
+}
+
 nav ul {
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
     position: relative;
-    display: inline-block;
-    padding: 10px;
+    margin: 0 15px;
+    color: #fff;
 }
 
-nav ul li ul {
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;  /* Square-ish appearance with rounded corners */
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the nav items */
+nav ul li a:hover {
+    background-color: #2980b9;
+}
+
+/* Drop-down menu styling */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hidden drop-down content by default */
+.dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    list-style-type: none;
+    background-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Style for the drop-down links */
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hover effect for the drop-down items */
+.dropdown-content li a:hover {
+    background-color: #2980b9;
+}
+
+/* Optional: Adding smooth transition for the dropdown */
+.dropdown-content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsive: Stack the menu items on smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-nav ul li:hover ul {
-    display: block;
+h1, h2 {
+    color: #2C3E50;
 }
 
-nav ul li ul li {
-    padding: 8px;
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Styling for links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Notes styling */
+.note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+/* Styling for ordered lists */
+ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ol li {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Image styling for infopics */
 .infopic {
     display: block;
-    margin: 10px;
+    margin: 10px 0;
     max-width: 100%;
-    height: auto
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Lists with a description and images */
+ul li img {
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Styling for specific sections */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List items within steps or instructions */
+ol li ul {
+    padding-left: 20px;
+}
+
+ol li ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+li b {
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+/* Make sure the layout adjusts nicely */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    ol {
+        padding-left: 10px;
+    }
+
+    .infopic {
+        max-width: 100%;
+    }
 }

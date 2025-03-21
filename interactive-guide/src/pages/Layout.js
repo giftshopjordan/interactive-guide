@@ -14,35 +14,38 @@ const Layout = () => {
                     <li>
                         <Link to="/">Home</Link>
                     </li>
-                    <li 
+                    <li
+                        className="dropdown"
                         onMouseEnter={() => setShowChequesDropdown(true)}
                         onMouseLeave={() => setShowChequesDropdown(false)}
                     >
                         Cheques
                         {showChequesDropdown && (
-                            <ul>
+                            <ul className="dropdown-content">
                                 <li><Link to="/cheques/printCheques">Printing Cheques</Link></li>
                             </ul>
                         )}
                     </li>
                     <li
+                        className="dropdown"
                         onMouseEnter={() => setShowCloverDropdown(true)}
                         onMouseLeave={() => setShowCloverDropdown(false)}
                     >
                         Clover
                         {showCloverDropdown && (
-                            <ul>
+                            <ul className="dropdown-content">
                                 <li><Link to="/clover">Clover</Link></li>
                             </ul>
                         )}
                     </li>
                     <li
+                        className="dropdown"
                         onMouseEnter={() => setShowQuickbooksDropdown(true)}
                         onMouseLeave={() => setShowQuickbooksDropdown(false)}
                     >
                         Quickbooks
                         {showQuickbooksDropdown && (
-                            <ul>
+                            <ul className="dropdown-content">
                                 <li><Link to="/quickbooks/PayBills">PayBills</Link></li>
                             </ul>
                         )}
