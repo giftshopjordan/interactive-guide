@@ -12,7 +12,7 @@ const PrintCheques = () => {
                         <li>
                             <ul>
                                 <li>
-                                    Gather all the invoices from the blue <b>Gift Shop Invoices</b> folder. Make sure they are all <Link to="/quickbooks/PayBills">entered into QuickBooks</Link>.
+                                    Gather all the invoices from the blue <b>Gift Shop Invoices</b> folder. Make sure they are all <Link to="/quickbooks/EnterBills">entered into QuickBooks</Link>.
                                 </li>
                                 <li>
                                     Once in Quickbooks, select <b>Pay Bills</b> from the <b>Home</b> window. <img className="infopic" src={images['pay_bills']} alt="Pay bills icon" />

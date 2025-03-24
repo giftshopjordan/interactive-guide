@@ -34,7 +34,7 @@ const Layout = () => {
                         Clover
                         {showCloverDropdown && (
                             <ul className="dropdown-content">
-                                <li><Link to="/clover">Clover</Link></li>
+                                <li><Link to="/clover/SalesTapes">Sales Tapes</Link></li>
                             </ul>
                         )}
                     </li>
@@ -43,10 +43,10 @@ const Layout = () => {
                         onMouseEnter={() => setShowQuickbooksDropdown(true)}
                         onMouseLeave={() => setShowQuickbooksDropdown(false)}
                     >
-                        Quickbooks
+                        QuickBooks
                         {showQuickbooksDropdown && (
                             <ul className="dropdown-content">
-                                <li><Link to="/quickbooks/PayBills">PayBills</Link></li>
+                                <li><Link to="/quickbooks/EnterBills">Enter Bills</Link></li>
                             </ul>
                         )}
                     </li>

@@ -30,7 +30,7 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     background-color: #3498db;
-    border-radius: 5px;  /* Square-ish appearance with rounded corners */
+    border-radius: 5px; /* Square-ish appearance with rounded corners */
     text-align: center;
     font-size: 1rem;
     transition: background-color 0.3s ease;
