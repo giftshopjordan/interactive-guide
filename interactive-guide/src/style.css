@@ -34,6 +34,7 @@ nav ul li a {
     text-align: center;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 /* Hover effect for the nav items */
@@ -42,6 +43,10 @@ nav ul li a:hover {
 }
 
 /* Drop-down menu styling */
+nav ul li.dropdown {
+    position: relative;
+}
+
 nav ul li.dropdown:hover .dropdown-content {
     display: block;
 }
@@ -58,15 +63,17 @@ nav ul li.dropdown:hover .dropdown-content {
     border-radius: 5px;
     transition: opacity 0.3s ease;
     opacity: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* Style for the drop-down links */
 .dropdown-content li {
-    padding: 10px;
+    padding: 5px;
 }
 
 .dropdown-content li a {
-    padding: 10px;
+    padding: 5px;
     background-color: #3498db;
     color: #fff;
     text-decoration: none;

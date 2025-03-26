@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Layout, Home, SalesTapes, PrintCheques, EnterBills, NoPage } from './utils/pageLoader';
+import { Layout, Home, SalesTapes, PrintCheques, EnterBills, NewItems, NoPage } from './utils/pageLoader';
 import './style.css';
 
 export default function App() {
@@ -14,6 +14,7 @@ export default function App() {
             <Route path="clover/SalesTapes" element={<SalesTapes />} />
             <Route path="cheques/printCheques" element={<PrintCheques />} />
             <Route path="quickbooks/EnterBills" element={<EnterBills />} />
+            <Route path="quickbooks/NewItems" element={<NewItems />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

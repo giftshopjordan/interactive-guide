@@ -47,6 +47,7 @@ const Layout = () => {
                         {showQuickbooksDropdown && (
                             <ul className="dropdown-content">
                                 <li><Link to="/quickbooks/EnterBills">Enter Bills</Link></li>
+                                <li><Link to="/quickbooks/NewItems">Add New Items</Link></li>
                             </ul>
                         )}
                     </li>

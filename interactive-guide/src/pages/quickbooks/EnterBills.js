@@ -42,6 +42,31 @@ const EnterBills = () => {
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    Begin entering each item into the first column (under the <b>ITEMS</b> tab). QuickBooks will start auto-filling the item, but make sure you are selecting the correct item.
+                                    <p className="note">Note: Some invoices have new items that you will need to add. See <Link to="/quickbooks/NewItems">adding new items</Link>.</p>
+                                    <img className="infopic" src={images["items_tab"]} alt="Items tab" />
+                                </li>
+                                <li>
+                                    Enter the quantity of each item ordered, then ensure the cost in QB matches with the cost on the invoice. Select <b>Gift Shop</b> under the <b>Class</b> column.
+                                    <img className="infopic" src={images["qty_and_cost"]} alt="Quantity and Cost" />
+                                    <img className="infopic" src={images["gs_class"]} alt="Gift Shop class" />
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    Enter the shipping costs under <b>Expenses</b> tab. It may be called something different on every invoice (delivery, handling, etc.).
+                                </li>
+                                <li>
+                                    Select the <b>Freight and Shipping Costs</b> account and set class to <b>Gift Shop</b>.
+                                    <img className="infopic" src={images["freight_and_shipping"]} alt="Freight and shipping" />
+                                </li>
+                            </ul>
+                        </li>
                     </ol>
                 </section>        
             </>

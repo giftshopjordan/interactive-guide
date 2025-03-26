@@ -14,4 +14,4 @@ export const SalesTapes = React.lazy(() => import("../pages/clover/SalesTapes"))
 
 // QuickBooks
 export const EnterBills = React.lazy(() => import("../pages/quickbooks/EnterBills"));
-
+export const NewItems = React.lazy(() => import("../pages/quickbooks/NewItems"));
