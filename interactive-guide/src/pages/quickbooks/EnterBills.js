@@ -67,6 +67,17 @@ const EnterBills = () => {
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            The <b>Amount Due</b> in QuickBooks should match the total on the invoice.
+                            <img className="infopic" src={images["amount_due"]} alt="Amount due" />
+                        </li>
+                        <li>
+                            Attach the scanned invoice to the QuickBooks bill.
+                            <img className="infopic" src={images["attach_file"]} alt="Attach file" />
+                        </li>
+                        <li>
+                            Place the invoice in the blue <b>Gift Shop Cheques</b> folder.
+                        </li>
                     </ol>
                 </section>        
             </>
