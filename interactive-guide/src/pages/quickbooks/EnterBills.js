@@ -79,6 +79,17 @@ const EnterBills = () => {
                             Place the invoice in the blue <b>Gift Shop Cheques</b> folder.
                         </li>
                     </ol>
+                </section>
+                <section>
+                    <h2>Entering a Discount</h2>
+                    <p>Occasionally an invoice will include a discount as a separate item rather than already having it applied.</p>
+                    <ul>
+                        <li>
+                            Enter the bill as you normally would. Navigate to the <b>Expenses</b> tab and select <b>Purchases - Resale Items: Rebate</b> from the <b>Account</b> column.
+                            <p className="note">Note: The amount needs to be entered as a negative.</p>
+                            <img className="infopic" src={images["discount"]} alt="Rebate" />
+                        </li>
+                    </ul>
                 </section>        
             </>
 };

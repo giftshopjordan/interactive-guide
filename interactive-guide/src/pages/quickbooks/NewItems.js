@@ -54,6 +54,24 @@ const NewItems = () => {
             <section>
                 <h2>Non-Inventory Part</h2>
                 <p>Non-Inventory Parts are usually used for Consignment items.</p>
+                <ol>
+                    <li>
+                        Following the one of the options mentioned above open the <b>New Item</b> window.
+                    </li>
+                    <li>
+                        Select <b>Non-Inventory Part</b> from the <b>Type</b> list.
+                        <img className="infopic" src={images["non_inventory"]} alt="Non inventory type" />
+                    </li>
+                    <li>
+                        Fill out the <b>Item Name</b> and <b>Subitem of</b> box as above.
+                        <p className="note">Note: The Subitem group should be a consignment group (Marked with (CON) at the end)</p>
+                        <img className="infopic" src={images["non_inventory_item"]} alt="Non inventory item" />
+                    </li>
+                    <li>
+                        Fill out the <b>Price</b> and <b>Account</b> boxes the same as above.
+                        <img className="infopic" src={images["non_inventory_price"]} alt="Non inventory price" />
+                    </li>
+                </ol>
             </section>
         </>
 };
