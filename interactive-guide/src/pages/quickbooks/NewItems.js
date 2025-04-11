@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { images } from "../../utils/imageLoader";
 
 const NewItems = () => {

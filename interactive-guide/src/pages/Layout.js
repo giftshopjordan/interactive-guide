@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, Link} from "react-router-dom";
 
 const Layout = () => {
@@ -6,6 +6,14 @@ const Layout = () => {
     const [showChequesDropdown, setShowChequesDropdown] = useState(false);
     const [showCloverDropdown, setShowCloverDropdown] = useState(false);
     const [showQuickbooksDropdown, setShowQuickbooksDropdown] = useState(false);
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem("darkMode") === "true";
+    });
+
+    useEffect(() => {
+        document.body.className = darkMode ? "dark" : "";
+        localStorage.setItem("darkMode", darkMode);
+    }, [darkMode]);
 
     return (
         <>
@@ -50,6 +58,16 @@ const Layout = () => {
                                 <li><Link to="/quickbooks/NewItems">Add New Items</Link></li>
                             </ul>
                         )}
+                    </li>
+                    <li style={{ marginLeft: "auto" }}>
+                        <label className="toggle-container">
+                            <input 
+                                type="checkbox"
+                                checked={darkMode}
+                                onChange={() => setDarkMode(prev => !prev)}
+                            />
+                            <span className="slider"></span>
+                        </label>
                     </li>
                 </ul>
             </nav>
