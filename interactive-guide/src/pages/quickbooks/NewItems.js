@@ -8,8 +8,8 @@ const NewItems = () => {
                     This page will cover the process of adding new items in QuickBooks. There are two main types of items, <b>Inventory Parts</b> and <b>Non-Inventory Part</b>.
                 </p>
                 <ol>
+                    <p>There are 2 main ways to enter a new item</p>
                     <li>
-                        <p>There are 2 main ways to enter a new item</p>
                         <ul>
                             <li>
                                 <h3>Option 1:</h3> From the <b>Home</b> window select <b>Inventory Centre</b> from <b>Inventory Activities</b>.
