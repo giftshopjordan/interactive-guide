@@ -2,7 +2,7 @@
     "name": "interactive-guide",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://giftshopjordan.github.io/interactive-guide",
+    "homepage": "https://giftshopjordan.github.io",
     "dependencies": {
         "cra-template": "1.2.0",
         "gh-pages": "^6.3.0",
