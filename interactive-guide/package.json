@@ -36,5 +36,11 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "overrides": {
+        "postcss": "^8.4.31",
+        "resolve-url-loader": {
+            "postcss": "^8.4.31"
+        }
     }
 }
