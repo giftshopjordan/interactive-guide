@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
 import { Layout, Home, SalesTapes, PrintCheques, EnterBills, NewItems, NoPage } from './utils/pageLoader';
+import RequireAuth from './utils/requireAuth';
 import './style.css';
 
 export default function App() {
@@ -9,7 +11,8 @@ export default function App() {
     <HashRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<RequireAuth><Layout /></RequireAuth>}>
             <Route index element={<Home />} />
             <Route path="clover/SalesTapes" element={<SalesTapes />} />
             <Route path="cheques/printCheques" element={<PrintCheques />} />
