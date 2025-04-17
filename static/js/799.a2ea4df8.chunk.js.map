@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/799.a2ea4df8.chunk.js","mappings":"gKAAA,MAIA,EAJeA,KACJC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,sB","sources":["pages/NoPage.js"],"sourcesContent":["const NoPage = () => {\n    return <h1>404 Page Not Found</h1>\n};\n\nexport default NoPage;"],"names":["NoPage","_jsx","children"],"sourceRoot":""}

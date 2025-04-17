@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/interactive-guide/static/css/main.f0fe6d0a.css",
+    "main.js": "/interactive-guide/static/js/main.31594508.js",
+    "static/js/957.168d3381.chunk.js": "/interactive-guide/static/js/957.168d3381.chunk.js",
+    "static/js/936.ec9efbf3.chunk.js": "/interactive-guide/static/js/936.ec9efbf3.chunk.js",
+    "static/js/799.a2ea4df8.chunk.js": "/interactive-guide/static/js/799.a2ea4df8.chunk.js",
+    "static/js/771.944535c7.chunk.js": "/interactive-guide/static/js/771.944535c7.chunk.js",
+    "static/js/180.87214696.chunk.js": "/interactive-guide/static/js/180.87214696.chunk.js",
+    "static/js/683.abe8a16b.chunk.js": "/interactive-guide/static/js/683.abe8a16b.chunk.js",
+    "static/js/541.475bb063.chunk.js": "/interactive-guide/static/js/541.475bb063.chunk.js",
+    "static/js/916.842d6317.chunk.js": "/interactive-guide/static/js/916.842d6317.chunk.js",
+    "static/media/print_drop-down.png": "/interactive-guide/static/media/print_drop-down.c4c9456e8bee564a6ac3.png",
+    "static/media/vendor_center.png": "/interactive-guide/static/media/vendor_center.dd33af95fd1207d0d4c2.png",
+    "static/media/discount.png": "/interactive-guide/static/media/discount.f92008d8e90aba759264.png",
+    "static/media/confirm_cheques.png": "/interactive-guide/static/media/confirm_cheques.e2ba9577f20bcc32d70b.png",
+    "static/media/pre_auth_bills.png": "/interactive-guide/static/media/pre_auth_bills.a197d60f1d11b581bf91.png",
+    "static/media/pay_bills_screen.png": "/interactive-guide/static/media/pay_bills_screen.56a78b544aa124ebc0fa.png",
+    "static/media/attach_file.png": "/interactive-guide/static/media/attach_file.afac26e7e9ce0a169db1.png",
+    "index.html": "/interactive-guide/index.html",
+    "main.f0fe6d0a.css.map": "/interactive-guide/static/css/main.f0fe6d0a.css.map",
+    "main.31594508.js.map": "/interactive-guide/static/js/main.31594508.js.map",
+    "957.168d3381.chunk.js.map": "/interactive-guide/static/js/957.168d3381.chunk.js.map",
+    "936.ec9efbf3.chunk.js.map": "/interactive-guide/static/js/936.ec9efbf3.chunk.js.map",
+    "799.a2ea4df8.chunk.js.map": "/interactive-guide/static/js/799.a2ea4df8.chunk.js.map",
+    "771.944535c7.chunk.js.map": "/interactive-guide/static/js/771.944535c7.chunk.js.map",
+    "180.87214696.chunk.js.map": "/interactive-guide/static/js/180.87214696.chunk.js.map",
+    "683.abe8a16b.chunk.js.map": "/interactive-guide/static/js/683.abe8a16b.chunk.js.map",
+    "541.475bb063.chunk.js.map": "/interactive-guide/static/js/541.475bb063.chunk.js.map",
+    "916.842d6317.chunk.js.map": "/interactive-guide/static/js/916.842d6317.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0fe6d0a.css",
+    "static/js/main.31594508.js"
+  ]
+}
