@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Outlet, Link} from "react-router-dom";
+import DropDownMenu from "../components/DropDownMenu";
 
 const Layout = () => {
 
@@ -11,7 +12,7 @@ const Layout = () => {
     });
 
     useEffect(() => {
-        document.body.className = darkMode ? "dark" : "";
+        document.body.classList.toggle("dark", darkMode);
         localStorage.setItem("darkMode", darkMode);
     }, [darkMode]);
 
@@ -19,46 +20,29 @@ const Layout = () => {
         <>
             <nav>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li
-                        className="dropdown"
-                        onMouseEnter={() => setShowChequesDropdown(true)}
-                        onMouseLeave={() => setShowChequesDropdown(false)}
-                    >
-                        Cheques
-                        {showChequesDropdown && (
-                            <ul className="dropdown-content">
-                                <li><Link to="/cheques/printCheques">Printing Cheques</Link></li>
-                            </ul>
-                        )}
-                    </li>
-                    <li
-                        className="dropdown"
-                        onMouseEnter={() => setShowCloverDropdown(true)}
-                        onMouseLeave={() => setShowCloverDropdown(false)}
-                    >
-                        Clover
-                        {showCloverDropdown && (
-                            <ul className="dropdown-content">
-                                <li><Link to="/clover/SalesTapes">Sales Tapes</Link></li>
-                            </ul>
-                        )}
-                    </li>
-                    <li
-                        className="dropdown"
-                        onMouseEnter={() => setShowQuickbooksDropdown(true)}
-                        onMouseLeave={() => setShowQuickbooksDropdown(false)}
-                    >
-                        QuickBooks
-                        {showQuickbooksDropdown && (
-                            <ul className="dropdown-content">
-                                <li><Link to="/quickbooks/EnterBills">Enter Bills</Link></li>
-                                <li><Link to="/quickbooks/NewItems">Add New Items</Link></li>
-                            </ul>
-                        )}
-                    </li>
+                    <li><Link to="/">Home</Link></li>
+
+                    <DropDownMenu 
+                        label="Cheques"
+                        items={[
+                            { to: "/cheques/printCheques", text: "Printing Cheques" }
+                        ]}
+                    />
+                    
+                    <DropDownMenu 
+                        label="Clover"
+                        items={[
+                            { to: "/clover/SalesTapes", text: "Sales Tapes" }
+                        ]}
+                    />
+                    
+                    <DropDownMenu 
+                        label="QuickBooks"
+                        items={[
+                            { to: "/quickbooks/EnterBills", text: "Enter Bills" },
+                            { to: "/quickbooks/NewItems", text: "Add New Items" }
+                        ]}
+                    />
                     <li style={{ marginLeft: "auto" }}>
                         <label className="toggle-container">
                             <input 

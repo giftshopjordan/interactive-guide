@@ -51,6 +51,20 @@ nav ul li.dropdown:hover .dropdown-content {
     display: block;
 }
 
+.nav-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .nav-button:hover {
+    background-color: #2980b9;
+  }  
+
 /* Toggle switch styles */
 .toggle-container {
     position: relative;
