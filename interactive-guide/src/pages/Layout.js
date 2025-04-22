@@ -4,9 +4,6 @@ import DropDownMenu from "../components/DropDownMenu";
 
 const Layout = () => {
 
-    const [showChequesDropdown, setShowChequesDropdown] = useState(false);
-    const [showCloverDropdown, setShowCloverDropdown] = useState(false);
-    const [showQuickbooksDropdown, setShowQuickbooksDropdown] = useState(false);
     const [darkMode, setDarkMode] = useState(() => {
         return localStorage.getItem("darkMode") === "true";
     });
