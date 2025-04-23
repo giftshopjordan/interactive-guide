@@ -1,11 +1,107 @@
-/* Base Reset */
+/* ---------------- Base Reset ---------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Nav bar styles */
+/* ---------------- Base Styles ---------------- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2C3E50;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+ol, ul {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ol li {
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ol li ul {
+    padding-left: 20px;
+}
+
+ol li ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+li b {
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+/* ---------------- Layout / Sections ---------------- */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.infopic {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+ul li img {
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* ---------------- Nav Bar ---------------- */
 nav {
     background-color: #2C3E50;
     padding: 10px 20px;
@@ -30,42 +126,85 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     background-color: #3498db;
-    border-radius: 5px; /* Square-ish appearance with rounded corners */
+    border-radius: 5px;
     text-align: center;
     font-size: 1rem;
     transition: background-color 0.3s ease;
     white-space: nowrap;
 }
 
-/* Hover effect for the nav items */
 nav ul li a:hover {
     background-color: #2980b9;
 }
 
-/* Drop-down menu styling */
-nav ul li.dropdown {
+/* ---------------- Dropdown Menus ---------------- */
+.dropdown {
     position: relative;
 }
 
-nav ul li.dropdown:hover .dropdown-content {
-    display: block;
+.nav-button {
+    padding: 10px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
-.nav-button {
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    padding: 15px 20px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .nav-button:hover {
+.nav-button:focus,
+.nav-button:hover {
     background-color: #2980b9;
-  }  
+}
 
-/* Toggle switch styles */
+.dropdown-content {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: -1px;
+}
+
+.dropdown-content.open,
+.dropdown:hover .dropdown-content,
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+    background-color: #2980b9;
+    outline: none;
+}
+
+/* ---------------- Toggle Switch ---------------- */
 .toggle-container {
     position: relative;
     display: inline-block;
@@ -111,139 +250,7 @@ nav ul li.dropdown:hover .dropdown-content {
     transform: translateX(26px);
 }
 
-/* Hidden drop-down content by default */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #3498db;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 150px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    padding: 0;
-    margin: 0;
-}
-
-/* Style for the drop-down links */
-.dropdown-content li {
-    padding: 5px;
-}
-
-.dropdown-content li a {
-    padding: 5px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Hover effect for the drop-down items */
-.dropdown-content li a:hover {
-    background-color: #2980b9;
-}
-
-/* Optional: Adding smooth transition for the dropdown */
-.dropdown-content {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-nav ul li.dropdown:hover .dropdown-content {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Responsive: Stack the menu items on smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        padding: 15px;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-}
-
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-h1, h2 {
-    color: #2C3E50;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-/* Paragraph styling */
-p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* Styling for links */
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Notes styling */
-.note {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #7f8c8d;
-    margin: 10px 0;
-}
-
-/* Styling for ordered lists */
-ol {
-    padding-left: 20px;
-    margin: 20px 0;
-}
-
-ol li {
-    margin-bottom: 20px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Dark mode base styles */
+/* ---------------- Dark Mode ---------------- */
 body.dark {
     background-color: #1e1e1e;
     color: #ddd;
@@ -283,49 +290,23 @@ body.dark li b {
     color: #f1f1f1;
 }
 
-/* Image styling for infopics */
-.infopic {
-    display: block;
-    margin: 10px 0;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for images */
-}
-
-/* Lists with a description and images */
-ul li img {
-    max-width: 200px;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-
-/* Styling for specific sections */
-section {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* List items within steps or instructions */
-ol li ul {
-    padding-left: 20px;
-}
-
-ol li ul li {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-li b {
-    color: #2C3E50;
-    font-weight: bold;
-}
-
-/* Make sure the layout adjusts nicely */
+/* ---------------- Responsive Adjustments ---------------- */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
     h1 {
         font-size: 1.5rem;
     }
