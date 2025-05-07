@@ -1,12 +1,10 @@
-let imageContext;
-try {
-    imageContext = require.context('../images', false, /\.(png|jpe?g|gif)$/);
-} catch (e) {
-    imageContext = { keys: () => [], resolve: () => {} };
-}
+const imageModules = import.meta.glob('../images/*.{png,jpg,jpeg,gif}', { eager: true });
 
-export const images = imageContext.keys().reduce((acc, path) => {
-    const imageName = path.replace('./', '').replace(/\.(png|jpe?g|gif)$/, '');
-    acc[imageName] = imageContext(path);
-    return acc;
+export const images = Object.entries(imageModules).reduce((acc, [path, module]) => {
+  const name = path
+    .split('/')
+    .pop()
+    .replace(/\.(png|jpe?g|gif)$/, '');
+  acc[name] = module.default;
+  return acc;
 }, {});

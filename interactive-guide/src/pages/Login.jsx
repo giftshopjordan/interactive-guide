@@ -6,7 +6,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        if (password === "G!ft$hop24") {
+        if (password === "G!ft$h0p24") {
             localStorage.setItem("authenticated", "true");
             navigate("/");
         } else {

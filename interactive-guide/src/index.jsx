@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Login from './pages/Login';
+import Login from './pages/Login.jsx';
 import { Layout, Home, SalesTapes, PrintCheques, EnterBills, NewItems, NoPage } from './utils/pageLoader';
-import RequireAuth from './utils/requireAuth';
+import RequireAuth from './utils/requireAuth.jsx';
 import './style.css';
 
 export default function App() {
