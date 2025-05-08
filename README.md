@@ -16,7 +16,6 @@ A responsive, accessible web-based guide for internal workplace processes, built
 
 ```
 interactive-guide/
-├── public/
 ├── src/
 │   ├── assets/
 │   ├── components/
